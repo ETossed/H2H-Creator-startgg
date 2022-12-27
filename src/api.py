@@ -25,6 +25,7 @@ def run_query(query, variables, header, auto_retry):
         except RequestError:
             print("Error 400: Bad request (probably means your key is wrong)")
             return
+
         except TooManyRequestsError:
             if auto_retry:
                 print("Error 429: Sending too many requests right now, trying again in {} seconds".format(seconds))
@@ -33,12 +34,15 @@ def run_query(query, variables, header, auto_retry):
             else:
                 print("Error 429: Sending too many requests right now")
                 return
+
         except ResponseError:
             print("Error {}: Unknown request error".format(request.status_code))
             return
+
         except ServerError:
             print("Error {}: Unknown server error".format(request.status_code))
             return
+            
         except NoIdeaError:
             print("Error {}: I literally have no idea how you got this status code, please send this to me".format(request.status_code))
             return
