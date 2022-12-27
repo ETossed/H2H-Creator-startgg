@@ -1,11 +1,8 @@
-import requests
-import api
 import events
 import players
-import results
 
 class H2HMaker(object):
-    def __init__(self, key, save_json:bool, sleep_time=10): # Initializes object
+    def __init__(self, key, save_json:bool, sleep_time=15): # Initializes object
         self.key = key
         self.header = {"Authorization": "Bearer " + key}
         self.save_json = save_json
@@ -29,6 +26,12 @@ class H2HMaker(object):
 
     def print_sleep_time(self):
         print(self.sleep_time)
+
+    def get_results(self, tournaments:list, game:int): # Don't know if will be implemented
+        return
+
+    def create_h2h_spreadsheet(self, players:list, tournaments:list, game:int):
+        return
 
 def main():
     # Testing area
