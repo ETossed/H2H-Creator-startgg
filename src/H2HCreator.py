@@ -1,4 +1,8 @@
 import requests
+import api
+import events
+import players
+import results
 
 class H2HMaker(object):
     def __init__(self, key, sleep_time=10): # Initializes object
