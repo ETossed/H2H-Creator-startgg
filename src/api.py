@@ -2,9 +2,9 @@ import requests
 import time
 from exceptions import TooManyRequestsError, ResponseError, RequestError, ServerError, NoIdeaError
 
-def run_query(query, variables, header, auto_retry):
+def run_query(query, variables, header):
     # This helper function is necessary for TooManyRequestsErrors
-    def _run_query(query, variables, header, auto_retry, seconds): 
+    def _run_query(query, variables, header): 
         json_request = {'query': query, 'variables': variables}
         try:
             request = requests.post(url='https://api.start.gg/gql/alpha', json=json_request, headers=header)
@@ -27,13 +27,8 @@ def run_query(query, variables, header, auto_retry):
             return
 
         except TooManyRequestsError:
-            if auto_retry:
-                print("Error 429: Sending too many requests right now, trying again in {} seconds".format(seconds))
-                time.sleep(seconds)
-                return _run_query(query, variables, header, auto_retry, seconds*2)
-            else:
-                print("Error 429: Sending too many requests right now")
-                return
+            print("Error 429: Sending too many requests right now")
+            return
 
         except ResponseError:
             print("Error {}: Unknown request error".format(request.status_code))
@@ -42,7 +37,7 @@ def run_query(query, variables, header, auto_retry):
         except ServerError:
             print("Error {}: Unknown server error".format(request.status_code))
             return
-            
+
         except NoIdeaError:
             print("Error {}: I literally have no idea how you got this status code, please send this to me".format(request.status_code))
             return
