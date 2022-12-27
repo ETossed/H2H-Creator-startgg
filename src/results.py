@@ -1,0 +1,1 @@
+# File for getting all results from list of players and events
