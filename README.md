@@ -1,4 +1,4 @@
-# **Python package for Head-to-Head Spreadsheet maker using the startgg api**
+# **Head-to-Head Spreadsheet maker using the startgg api for Python**
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/JeremySkalla/H2H-Creator-startgg?style=flat-square)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/JeremySkalla/H2H-Creator-startgg?style=flat-square)
