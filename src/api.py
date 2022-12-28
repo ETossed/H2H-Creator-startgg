@@ -34,7 +34,7 @@ def run_query(query, variables, header):
 
     except ServerError:
         print("Error {}: Unknown server error".format(request.status_code))
-        return
+        return 500
 
     except NoIdeaError:
         print("Error {}: I literally have no idea how you got this status code, please send this to me".format(request.status_code))
