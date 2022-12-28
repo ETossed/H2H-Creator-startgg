@@ -4,15 +4,27 @@
 import json
 from api import run_query
 from queries import *
+from time import sleep
 
-def get_events(tournaments:list, game:int, save_json:bool, header):
+def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_time:int):
     events = []
 
-    for t in tournaments:
+    i = 0
+    while(i < len(tournaments)):
+        t = tournaments[i]
         changed = False # If event exists and array changes
+        i += 1 # Iterate for next time
+
+        if i % 6 == 0: # Sleeping so startgg server doesn't hate me
+            sleep(15)
 
         variables = {"slug": t}
-        response = run_query(EVENT_QUERY, variables, header) 
+        response = run_query(EVENT_QUERY, variables, header) # Get response from server
+
+        if response == 500: # If random server error
+            print("Retrying in 15 seconds")
+            i -= 1
+            sleep(15)
 
         if response['data']['tournament'] is None: # Error checking
             print("ERROR: {} is not a valid tournament slug".format(t))
