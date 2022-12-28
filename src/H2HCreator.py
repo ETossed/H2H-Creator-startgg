@@ -1,5 +1,9 @@
 import events
 import players
+from dotenv import load_dotenv
+from os import getenv
+
+import json
 
 class H2HMaker(object):
     def __init__(self, key, save_json:bool, sleep_time=15): # Initializes object
@@ -26,8 +30,11 @@ class H2HMaker(object):
 
     def print_sleep_time(self):
         print(self.sleep_time)
+        
+    def get_events(self, tournaments:list, game:int, save_json:bool):
+        return events.get_events(tournaments, game, self.header)
 
-    def get_results(self, tournaments:list, game:int): # Don't know if will be implemented
+    def get_results(self, tournaments:list, game:int, save_json:bool): # Don't know if will be implemented
         return
 
     def create_h2h_spreadsheet(self, players:list, tournaments:list, game:int):
