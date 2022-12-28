@@ -12,6 +12,9 @@ query TournamentEvents($slug: String!) {
         maxPlayers
         minPlayers
       }
+      tournament {
+        name
+      }
     }
   }
 }

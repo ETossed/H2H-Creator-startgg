@@ -23,6 +23,7 @@ def get_events(tournaments:list, game:int, save_json:bool, header):
         for e in response['data']['tournament']['events']: # Loop to find specific event
             if e['videogame']['id'] == game:
                 if e['teamRosterSize'] is None or e['teamRosterSize']['maxPlayers'] == 1:
+                    del e['teamRosterSize']
                     events.append(e)
                     changed = True
                 
@@ -31,6 +32,6 @@ def get_events(tournaments:list, game:int, save_json:bool, header):
         
     if save_json: # Outputting json file if flag activated
         with open('events.json', 'w+', encoding='utf-8') as outfile:
-            json.dump(events, outfile)
+            json.dump(events, outfile, indent=4)
 
     return events

@@ -31,10 +31,10 @@ class H2HMaker(object):
     def print_sleep_time(self):
         print(self.sleep_time)
         
-    def get_events(self, tournaments:list, game:int, save_json:bool):
-        return events.get_events(tournaments, game, self.header)
+    def get_events(self, tournaments:list, game:int):
+        return events.get_events(tournaments, game, self.save_json, self.header)
 
-    def get_results(self, tournaments:list, game:int, save_json:bool): # Don't know if will be implemented
+    def get_results(self, tournaments:list, game:int): # Don't know if will be implemented
         return
 
     def create_h2h_spreadsheet(self, players:list, tournaments:list, game:int):
@@ -42,4 +42,12 @@ class H2HMaker(object):
 
 def main():
     # Testing area
-    return
+    load_dotenv()
+    key = getenv("KEY")
+    test = H2HMaker(key, True)
+
+    data = test.get_events(["genesis-8"], 1)
+
+    print(json.dumps(data, indent=4))
+
+main()
