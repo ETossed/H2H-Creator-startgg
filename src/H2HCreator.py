@@ -1,4 +1,5 @@
 import events
+import results
 import players
 from dotenv import load_dotenv
 from os import getenv
@@ -10,7 +11,7 @@ class H2HMaker(object):
         self.key = key
         self.header = {"Authorization": "Bearer " + key}
         self.save_json = save_json
-        self.sleep_time = 10 # Sleep time is how long it waits between 6 queries to sleep
+        self.sleep_time = sleep_time # Sleep time is how long it waits between 6 queries to sleep
 
     def set_key(self, new_key): # Sets new key
         self.key = new_key
@@ -32,10 +33,10 @@ class H2HMaker(object):
         print(self.sleep_time)
         
     def get_events(self, tournaments:list, game:int):
-        return events.get_events(tournaments, game, self.save_json, self.header)
+        return events.get_events(tournaments, game, self.save_json, self.header, self.sleep_time)
 
     def get_results(self, tournaments:list, game:int): # Don't know if will be implemented
-        return
+        return results.get_results(tournaments, game, self.save_json, self.header, self.sleep_time)
 
     def create_h2h_spreadsheet(self, players:list, tournaments:list, game:int):
         return
@@ -46,8 +47,8 @@ def main():
     key = getenv("KEY")
     test = H2HMaker(key, True)
 
-    data = test.get_events(["genesis-8"], 1)
+    data = test.get_results(["minnesota-monthly-melee-10-1"], 1)
 
-    print(json.dumps(data, indent=4))
+    # print(json.dumps(data, indent=4))
 
 main()
