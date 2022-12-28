@@ -14,13 +14,14 @@ query TournamentEvents($slug: String!) {
       }
       tournament {
         name
+        id
       }
     }
   }
 }
 '''
 
-SET_QUERY = '''
+RESULTS_QUERY = '''
 query EventSets($eventId: ID!, $page: Int!) {
   event(id: $eventId) {
     tournament {
