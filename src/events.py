@@ -8,6 +8,8 @@ from time import sleep
 
 def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_time:int):
     events = []
+    substrings = ['singles', '1v1', 'championships', 'ladder']
+    bad_substrings = ['volleyball', 'doubles', 'amateur']
 
     i = 0
     while(i < len(tournaments)):
@@ -37,9 +39,13 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
         for e in response['data']['tournament']['events']: # Loop to find specific event
             if e['videogame']['id'] == game:
                 if e['teamRosterSize'] is None or e['teamRosterSize']['maxPlayers'] == 1:
-                    del e['teamRosterSize']
-                    events.append(e)
-                    changed = True
+                    if any(x in e['name'].lower() for x in substrings):
+                        if any(y in e['name'].lower() for y in bad_substrings):
+                            continue
+                        else:
+                            del e['teamRosterSize']
+                            events.append(e)
+                            changed = True
                 
         if (not changed): # If no event found
             print("ERROR: {} had no matching singles events for desired videogame ID".format(t))
