@@ -3,7 +3,7 @@
 import json
 from api import run_query
 from events import get_events
-from queries import *
+from queries import RESULTS_QUERY
 from time import sleep
 from exceptions import *
 

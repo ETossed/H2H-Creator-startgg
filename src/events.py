@@ -3,7 +3,7 @@
 
 import json
 from api import run_query
-from queries import *
+from queries import EVENT_QUERY
 from time import sleep
 
 def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_time:int):
