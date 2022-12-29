@@ -20,7 +20,7 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
 
         if i % 6 == 0: # Sleeping so startgg server doesn't hate me
             print("Sleeping for 15 seconds") # Console logging
-            sleep(15)
+            sleep(sleep_time)
 
         variables = {"slug": t}
         response = run_query(EVENT_QUERY, variables, header) # Get response from server
