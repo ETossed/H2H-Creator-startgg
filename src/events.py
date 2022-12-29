@@ -13,9 +13,11 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
     while(i < len(tournaments)):
         t = tournaments[i]
         changed = False # If event exists and array changes
+        print("Tournament {}".format(tournaments[i])) # Console logging
         i += 1 # Iterate for next time
 
         if i % 6 == 0: # Sleeping so startgg server doesn't hate me
+            print("Sleeping for 15 seconds") # Console logging
             sleep(15)
 
         variables = {"slug": t}
