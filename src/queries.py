@@ -52,12 +52,31 @@ query EventSets($eventId: ID!, $page: Int!) {
               player {
                 id
                 gamerTag
-                
+                user {
+                  slug
+                }
               }
             }
           }
         }
       }
+    }
+  }
+}
+'''
+
+PLAYERS_QUERY = '''
+query ($slug: String!) {
+  user(slug: $slug) {
+    player {
+      id
+      gamerTag
+    }
+    name
+    location {
+      country
+      state
+      city
     }
   }
 }
