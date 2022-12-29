@@ -31,12 +31,15 @@ class H2HMaker(object):
 
     def print_sleep_time(self):
         print(self.sleep_time)
+
+    def get_players_info(self, player_list:list): # List of slugs
+        return players.get_players_info(player_list, self.save_json, self.header, self.sleep_time)
         
     def get_events(self, tournaments:list, game:int):
         return events.get_events(tournaments, game, self.save_json, self.header, self.sleep_time)
 
-    def get_results(self, tournaments:list, game:int): # Don't know if will be implemented
-        return results.get_results(tournaments, game, self.save_json, self.header, self.sleep_time)
+    def get_results(self, tournaments:list, players:list, game:int): # Don't know if will be implemented
+        return results.get_results(tournaments, players, game, self.save_json, self.header, self.sleep_time)
 
     def create_h2h_spreadsheet(self, players:list, tournaments:list, game:int):
         return
@@ -47,7 +50,11 @@ def main():
     key = getenv("KEY")
     test = H2HMaker(key, True)
 
-    data = test.get_results(["minnesota-monthly-melee-10-1"], 1)
+    print(test.get_results(["smash-summit-14-presented-by-coinbase"], ["1c97bdae", "da8b9c25"], 1))
+
+    # test.get_events(["smash-summit-14-presented-by-coinbase"], 1)
+
+    # test.get_players_info(["1c97bdae", "da8b9c25"])
 
     # print(json.dumps(data, indent=4))
 
