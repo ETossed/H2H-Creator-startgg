@@ -3,11 +3,12 @@
 import json
 from api import run_query
 from events import get_events
+from players import get_players_info
 from queries import RESULTS_QUERY
 from time import sleep
 from exceptions import *
 
-def get_results(tournaments:list, game:int, save_json:bool, header, sleep_time):
+def get_results(tournaments:list, players:list, game:int, save_json:bool, header, sleep_time):
     results = {}
     events = get_events(tournaments, game, save_json, header, sleep_time) # Gets event ids
 
@@ -15,6 +16,7 @@ def get_results(tournaments:list, game:int, save_json:bool, header, sleep_time):
         print("Now doing event {}".format(e['id']))
         sets = [] # List of sets
         i = 1 # Page
+
         done = False
 
         while (not done):
@@ -24,6 +26,7 @@ def get_results(tournaments:list, game:int, save_json:bool, header, sleep_time):
 
             variables = {"eventId": e['id'], "page": i}
             response = run_query(RESULTS_QUERY, variables, header) # Send request
+            print("Page {}".format(i)) # Console logging
 
             if response == 500: # If random server error
                 print("Retrying in 15 seconds")
@@ -42,10 +45,13 @@ def get_results(tournaments:list, game:int, save_json:bool, header, sleep_time):
             elif response['data']['event']['sets']['nodes'] == []: # If pagination completed
                 done = True
             else:
-                print("Page {}".format(i)) # Console logging
                 i += 1 # iteration for next time
-                
-                sets.append(response['data']['event']['sets']['nodes']) # Adding all sets from page
+
+            for s in response['data']['event']['sets']['nodes']: # Iterate through all sets
+                player1 = s['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #1
+                player2 = s['slots'][1]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #2
+                if (player1 in players or player2 in players): # If either player is in the list
+                    sets.append(s) # Append set to sets list
 
         results[e['id']] = {
             'tournamentName': e['tournament']['name'],
