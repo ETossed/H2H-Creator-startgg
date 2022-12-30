@@ -1,4 +1,4 @@
-# **Head-to-Head Spreadsheet maker using the startgg api for Python**
+# **Head-to-Head Spreadsheet maker using the startgg api for Python (BETA)**
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/ETossed/H2H-Creator-startgg?style=flat-square)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ETossed/H2H-Creator-startgg?style=flat-square)
@@ -15,6 +15,16 @@
 - `pip install H2H_Creator_startgg`
 - PyPI Page: [https://pypi.org/project/H2H-Creator-startgg/](https://pypi.org/project/H2H-Creator-startgg/)
 - Make sure you have your API Key! Go to your developer settings in your profile and create a new token if you don't have it! The `'KEY'` in the examples is just a placeholder for whatever your key is
+
+## **FAQ**
+
+- Why do you have a sleep timer?
+
+Well, you see, startgg will deny your API requests if you make too many of them, so I've found that over my hundreds (if not 1000+) of hours of using startgg's API, setting a sleep timer for 15 seconds in between around 6 or 7 queries works really well, and you can just let the script run. Obviously, you can change that with the variable sleep_time in the H2HMaker object initializiation, but that's where I recommend keeping it
+
+- Other features soon?
+
+Win/Loss table maker should be out very soon, which is another way to display the data. Soon you'll be able to import directly from a saved results file from the `get_results()` function, instead of doing it all in one step. Other features coming soon, as well as bug fixes regularly since this is in beta.
 
 ## **Required Packages**
 
