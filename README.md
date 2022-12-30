@@ -1,8 +1,8 @@
 # **Head-to-Head Spreadsheet maker using the startgg api for Python**
 
-![GitHub last commit](https://img.shields.io/github/last-commit/JeremySkalla/H2H-Creator-startgg?style=flat-square)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/JeremySkalla/H2H-Creator-startgg?style=flat-square)
-![GitHub](https://img.shields.io/github/license/JeremySkalla/H2H-Creator-startgg?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/ETossed/H2H-Creator-startgg?style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/ETossed/H2H-Creator-startgg?style=flat-square)
+![GitHub](https://img.shields.io/github/license/ETossed/H2H-Creator-startgg?style=flat-square)
 ![PyPI](https://img.shields.io/pypi/v/H2H_Creator_startgg?style=flat-square)
 [![Downloads](https://pepy.tech/badge/H2H_Creator_startgg)](https://pepy.tech/project/pysmashgg)
 
