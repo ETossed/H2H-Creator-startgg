@@ -1,0 +1,38 @@
+{
+    "1c97bdae": {
+        "player": {
+            "id": 1000,
+            "gamerTag": "Mang0"
+        },
+        "name": null,
+        "location": {
+            "country": "United States",
+            "state": "CA",
+            "city": null
+        }
+    },
+    "da8b9c25": {
+        "player": {
+            "id": 19554,
+            "gamerTag": "iBDW"
+        },
+        "name": null,
+        "location": {
+            "country": "United States",
+            "state": "NY",
+            "city": "Shirley"
+        }
+    },
+    "cfe7a825": {
+        "player": {
+            "id": 1021,
+            "gamerTag": "aMSa"
+        },
+        "name": null,
+        "location": {
+            "country": "Japan",
+            "state": null,
+            "city": "Saitama"
+        }
+    }
+}
