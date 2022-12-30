@@ -16,11 +16,11 @@ class H2HMaker(object):
         self.key = new_key
         self.header = {"Authorization": "Bearer " + new_key}
 
-    def set_sleep_time(self, new_sleep_time):
-        self.sleep_time = new_sleep_time
-
     def set_save_json(self, new_save_json):
         self.save_json = new_save_json
+
+    def set_sleep_time(self, new_sleep_time):
+        self.sleep_time = new_sleep_time
 
     def print_key(self):
         print(self.key)
@@ -43,12 +43,12 @@ class H2HMaker(object):
     def create_h2h_spreadsheet(self, tournaments:list, players:list, game:int):
         return creator.h2h_spreadsheet(tournaments, players, game, self.save_json, self.header, self.sleep_time)
 
-def main():
+# def main():
     # Testing area
-    load_dotenv()
-    key = getenv("KEY")
-    test = H2HMaker(key, True)
+    # load_dotenv()
+    # key = getenv("KEY")
+    # test = H2HMaker(key, True)
 
-    test.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase"], ["1c97bdae", "da8b9c25", "cfe7a825"], 1)
+    # test.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase"], ["1c97bdae", "da8b9c25", "cfe7a825"], 1)
 
-main()
+# main()

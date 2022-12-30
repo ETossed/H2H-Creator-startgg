@@ -1,1 +1,3 @@
-# **NOT READY**
+# **v0.1**
+
+- Initial beta
