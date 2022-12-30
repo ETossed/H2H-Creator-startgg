@@ -1,0 +1,1940 @@
+{
+    "Mang0": {
+        "Slug": "1c97bdae",
+        "ID": 1000,
+        "Events": [
+            792141
+        ],
+        "Sets": [
+            {
+                "fullRoundText": "Grand Final",
+                "id": 53899952,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Winners Final",
+                "id": 53899951,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 3",
+                "id": 53771808,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538088,
+                            "name": "TSM | Leffen",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538088
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 4465,
+                                        "gamerTag": "Leffen",
+                                        "user": {
+                                            "slug": "user/d9935e84"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Winners Semi-Final",
+                "id": 53899950,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538076,
+                            "name": "Liquid | Hungrybox",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538076
+                                        },
+                                        {
+                                            "id": 11557011
+                                        },
+                                        {
+                                            "id": 11557012
+                                        },
+                                        {
+                                            "id": 11557013
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1004,
+                                        "gamerTag": "Hungrybox",
+                                        "user": {
+                                            "slug": "user/076502c1"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 2",
+                "id": 53771806,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538091,
+                            "name": "FLY | KoDoRiN",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538091
+                                        },
+                                        {
+                                            "id": 11556986
+                                        },
+                                        {
+                                            "id": 11556987
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 26750,
+                                        "gamerTag": "KoDoRiN",
+                                        "user": {
+                                            "slug": "user/3d48f6c2"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Winners Quarter-Final",
+                "id": 53899948,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 1",
+                "id": 53771804,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538097,
+                            "name": "Soonsay",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538097
+                                        },
+                                        {
+                                            "id": 11556970
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 324561,
+                                        "gamerTag": "Soonsay",
+                                        "user": {
+                                            "slug": "user/9c63d861"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "W": [
+            "iBDW",
+            "aMSa",
+            "iBDW"
+        ],
+        "L": []
+    },
+    "iBDW": {
+        "Slug": "da8b9c25",
+        "ID": 19554,
+        "Events": [
+            792141
+        ],
+        "Sets": [
+            {
+                "fullRoundText": "Grand Final",
+                "id": 53899952,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 3",
+                "id": 53777644,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Losers Final",
+                "id": 53899983,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 2
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Losers Semi-Final",
+                "id": 53899982,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 2
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538076,
+                            "name": "Liquid | Hungrybox",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538076
+                                        },
+                                        {
+                                            "id": 11557011
+                                        },
+                                        {
+                                            "id": 11557012
+                                        },
+                                        {
+                                            "id": 11557013
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1004,
+                                        "gamerTag": "Hungrybox",
+                                        "user": {
+                                            "slug": "user/076502c1"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 2",
+                "id": 53885778,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538072,
+                            "name": "Wizzrobe",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538072
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1028,
+                                        "gamerTag": "Wizzrobe",
+                                        "user": {
+                                            "slug": "user/b46a1da4"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 2",
+                "id": 53777642,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 2
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538107,
+                            "name": "Tempo | Axe",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538107
+                                        },
+                                        {
+                                            "id": 11557033
+                                        },
+                                        {
+                                            "id": 11557034
+                                        },
+                                        {
+                                            "id": 11565355
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 16342,
+                                        "gamerTag": "Axe",
+                                        "user": {
+                                            "slug": "user/1c278ce9"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Losers Quarter-Final",
+                "id": 53899980,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 2
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538062,
+                            "name": "Zain",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538062
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 6126,
+                                        "gamerTag": "Zain",
+                                        "user": {
+                                            "slug": "user/2a371960"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Losers Round 3",
+                "id": 53899978,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538107,
+                            "name": "Tempo | Axe",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538107
+                                        },
+                                        {
+                                            "id": 11557033
+                                        },
+                                        {
+                                            "id": 11557034
+                                        },
+                                        {
+                                            "id": 11565355
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 16342,
+                                        "gamerTag": "Axe",
+                                        "user": {
+                                            "slug": "user/1c278ce9"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Winners Quarter-Final",
+                "id": 53899948,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 1",
+                "id": 53777640,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538109,
+                            "name": "Professor Pro",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538109
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 5563,
+                                        "gamerTag": "Professor Pro",
+                                        "user": {
+                                            "slug": "user/bc1a73ff"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Losers Round 2",
+                "id": 53899974,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538067,
+                            "name": "Panda | Plup",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538067
+                                        },
+                                        {
+                                            "id": 11557024
+                                        },
+                                        {
+                                            "id": 11559619
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 15990,
+                                        "gamerTag": "Plup",
+                                        "user": {
+                                            "slug": "user/ed4dcae4"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "W": [
+            "aMSa"
+        ],
+        "L": [
+            "Mang0",
+            "aMSa",
+            "Mang0"
+        ]
+    },
+    "aMSa": {
+        "Slug": "cfe7a825",
+        "ID": 1021,
+        "Events": [
+            792141
+        ],
+        "Sets": [
+            {
+                "fullRoundText": "Winners Final",
+                "id": 53899951,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538086,
+                            "name": "C9 | Mang0",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538086
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1000,
+                                        "gamerTag": "Mang0",
+                                        "user": {
+                                            "slug": "user/1c97bdae"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 3",
+                "id": 53777644,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Losers Final",
+                "id": 53899983,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 2
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538103,
+                            "name": "Panda | iBDW",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538103
+                                        },
+                                        {
+                                            "id": 11556944
+                                        },
+                                        {
+                                            "id": 11556981
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 19554,
+                                        "gamerTag": "iBDW",
+                                        "user": {
+                                            "slug": "user/da8b9c25"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Winners Semi-Final",
+                "id": 53899949,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538062,
+                            "name": "Zain",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538062
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 6126,
+                                        "gamerTag": "Zain",
+                                        "user": {
+                                            "slug": "user/2a371960"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 2",
+                "id": 53777643,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538109,
+                            "name": "Professor Pro",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538109
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 5563,
+                                        "gamerTag": "Professor Pro",
+                                        "user": {
+                                            "slug": "user/bc1a73ff"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Winners Quarter-Final",
+                "id": 53899946,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 0
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538088,
+                            "name": "TSM | Leffen",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538088
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 4465,
+                                        "gamerTag": "Leffen",
+                                        "user": {
+                                            "slug": "user/d9935e84"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "fullRoundText": "Round 1",
+                "id": 53777641,
+                "slots": [
+                    {
+                        "standing": {
+                            "placement": 1,
+                            "stats": {
+                                "score": {
+                                    "value": 3
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538104,
+                            "name": "VGBC RB | aMSa",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538104
+                                        },
+                                        {
+                                            "id": 11556938
+                                        },
+                                        {
+                                            "id": 11556974
+                                        },
+                                        {
+                                            "id": 11556975
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 1021,
+                                        "gamerTag": "aMSa",
+                                        "user": {
+                                            "slug": "user/cfe7a825"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "standing": {
+                            "placement": 2,
+                            "stats": {
+                                "score": {
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "entrant": {
+                            "id": 11538107,
+                            "name": "Tempo | Axe",
+                            "participants": [
+                                {
+                                    "entrants": [
+                                        {
+                                            "id": 11538107
+                                        },
+                                        {
+                                            "id": 11557033
+                                        },
+                                        {
+                                            "id": 11557034
+                                        },
+                                        {
+                                            "id": 11565355
+                                        }
+                                    ],
+                                    "player": {
+                                        "id": 16342,
+                                        "gamerTag": "Axe",
+                                        "user": {
+                                            "slug": "user/1c278ce9"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "W": [
+            "iBDW"
+        ],
+        "L": [
+            "Mang0",
+            "iBDW"
+        ]
+    }
+}
