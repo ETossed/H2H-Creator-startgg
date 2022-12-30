@@ -3,7 +3,7 @@ import csv
 from players import get_players_info
 from results import get_results
 
-def create_player_dictionary(results, players, save_json:bool, header, sleep_time):
+def create_player_dictionary(results:list, players:list, save_json:bool, header, sleep_time):
     players_info = get_players_info(players, save_json, header, sleep_time)
 
     player_dict = {}
