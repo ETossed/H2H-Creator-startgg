@@ -13,6 +13,7 @@
 ## **How to install current version**
 
 - `pip install H2H_Creator_startgg`
+- PyPI Page: [https://pypi.org/project/H2H-Creator-startgg/](https://pypi.org/project/H2H-Creator-startgg/)
 - Make sure you have your API Key! Go to your developer settings in your profile and create a new token if you don't have it! The `'KEY'` in the examples is just a placeholder for whatever your key is
 
 ## **Required Packages**
