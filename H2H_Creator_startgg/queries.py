@@ -3,6 +3,7 @@ query TournamentEvents($slug: String!) {
   tournament(slug: $slug) {
     events {
       id
+      slug
       name
       numEntrants
       videogame {
@@ -22,8 +23,9 @@ query TournamentEvents($slug: String!) {
 '''
 
 RESULTS_QUERY = '''
-query EventSets($eventId: ID!, $page: Int!) {
-  event(id: $eventId) {
+query EventSets($slug: String!, $page: Int!) {
+  event(slug: $slug) {
+    slug
     tournament {
       id
       name

@@ -34,21 +34,21 @@ class H2HMaker(object):
     def get_players_info(self, player_list:list): # List of slugs
         return players.get_players_info(player_list, self.save_json, self.header, self.sleep_time)
         
-    def get_events(self, tournaments:list, game:int):
+    def get_events(self, tournaments:list, game):
         return events.get_events(tournaments, game, self.save_json, self.header, self.sleep_time)
 
-    def get_results(self, tournaments:list, players:list, game:int): # Don't know if will be implemented
-        return results.get_results(tournaments, players, game, self.save_json, self.header, self.sleep_time)
+    def get_results(self, events:list, players:list): 
+        return results.get_results(events, players, self.save_json, self.header, self.sleep_time)
 
-    def create_h2h_spreadsheet(self, tournaments:list, players:list, game:int):
-        return creator.h2h_spreadsheet(tournaments, players, game, self.save_json, self.header, self.sleep_time)
+    def create_h2h_spreadsheet(self, events:list, players:list):
+        return creator.h2h_spreadsheet(events, players, self.save_json, self.header, self.sleep_time)
 
 # def main():
-    # Testing area
-    # load_dotenv()
-    # key = getenv("KEY")
-    # test = H2HMaker(key, True)
+#     # Testing area
+#     load_dotenv()
+#     key = getenv("KEY")
+#     test = H2HMaker(key, True)
 
-    # test.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase"], ["1c97bdae", "da8b9c25", "cfe7a825"], 1)
+#     test.create_h2h_spreadsheet(["tournament/smash-summit-14-presented-by-coinbase/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"])
 
 # main()

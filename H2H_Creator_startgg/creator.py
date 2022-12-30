@@ -3,7 +3,7 @@ import csv
 from players import get_players_info
 from results import get_results
 
-def create_player_dictionary(results, players, save_json:bool, header, sleep_time):
+def create_player_dictionary(results:list, players:list, save_json:bool, header, sleep_time):
     players_info = get_players_info(players, save_json, header, sleep_time)
 
     player_dict = {}
@@ -12,7 +12,7 @@ def create_player_dictionary(results, players, save_json:bool, header, sleep_tim
 
     for tournament in results:
         for set in results[tournament]['sets']:
-            event_id = results[tournament]['eventId']
+            event_slug = tournament
             entrant1 = set['slots'][0]['entrant']['participants'][0]['player']['gamerTag'].split(' | ')[-1].strip() # Gamertag
             entrant1_slug = set['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Slug
             entrant1_score = set['slots'][0]['standing']['stats']['score']['value'] # Score
@@ -23,10 +23,10 @@ def create_player_dictionary(results, players, save_json:bool, header, sleep_tim
             if set['slots'][0]['standing'] is not None: # If match is completed
                 # Both players in the set are important
                 if (entrant1_slug in players and entrant2_slug in players): 
-                    if (event_id not in player_dict[entrant1]['Events']): # Adds event to event list
-                        player_dict[entrant1]['Events'].append(event_id)
-                    if (event_id not in player_dict[entrant2]['Events']):# Adds event to event list
-                        player_dict[entrant2]['Events'].append(event_id)
+                    if (event_slug not in player_dict[entrant1]['Events']): # Adds event to event list
+                        player_dict[entrant1]['Events'].append(event_slug)
+                    if (event_slug not in player_dict[entrant2]['Events']):# Adds event to event list
+                        player_dict[entrant2]['Events'].append(event_slug)
 
                     if (set not in player_dict[entrant1]['Sets']): # Prevents duplicate sets, happens with shitty apis lmao
                         player_dict[entrant1]['Sets'].append(set)
@@ -43,8 +43,8 @@ def create_player_dictionary(results, players, save_json:bool, header, sleep_tim
                 # Player 1 in the set is important
                 elif (entrant1_slug in players): 
                     # Checking for event attendance marked already or not
-                    if (event_id not in player_dict[entrant1]['Events']):
-                        player_dict[entrant1]['Events'].append(event_id)
+                    if (event_slug not in player_dict[entrant1]['Events']):
+                        player_dict[entrant1]['Events'].append(event_slug)
 
                     # Add set to sets
                     if (set not in player_dict[entrant1]['Sets']): # Prevents duplicate sets, happens with shitty apis lmao
@@ -57,8 +57,8 @@ def create_player_dictionary(results, players, save_json:bool, header, sleep_tim
                 # Player 2 in the set is important
                 elif (entrant2_slug in players): 
                     # Checking for event attendance marked already or not
-                    if (event_id not in player_dict[entrant2]['Events']):
-                        player_dict[entrant2]['Events'].append(event_id)
+                    if (event_slug not in player_dict[entrant2]['Events']):
+                        player_dict[entrant2]['Events'].append(event_slug)
 
                     # Add set to sets
                     if (set not in player_dict[entrant2]['Sets']): # Prevents duplicate sets, happens with shitty apis lmao
@@ -150,8 +150,8 @@ def to_csv_h2h_ids(data, output='H2H_table.csv'):
     writer = csv.writer(open(output,'w',encoding='utf-8',newline=''))
     writer.writerows(csv_lines)
 
-def h2h_spreadsheet(tournaments:list, players:list, game:int, save_json:bool, header, sleep_time):
-    results = get_results(tournaments, players, game, save_json, header, sleep_time) # Gets results
+def h2h_spreadsheet(tournaments:list, players:list, save_json:bool, header, sleep_time):
+    results = get_results(tournaments, players, save_json, header, sleep_time) # Gets results
 
     player_data = create_player_dictionary(results, players, save_json, header, sleep_time) # Gets player data
 

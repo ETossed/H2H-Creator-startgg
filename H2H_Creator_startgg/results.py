@@ -8,12 +8,11 @@ from queries import RESULTS_QUERY
 from time import sleep
 from exceptions import *
 
-def get_results(tournaments:list, players:list, game:int, save_json:bool, header, sleep_time):
+def get_results(events:list, players:list, save_json:bool, header, sleep_time):
     results = {}
-    events = get_events(tournaments, game, save_json, header, sleep_time) # Gets event ids
 
     for e in events:
-        print("Now doing event {}".format(e['id']))
+        print("Now doing event {}".format(e))
         sets = [] # List of sets
         i = 1 # Page
 
@@ -24,7 +23,7 @@ def get_results(tournaments:list, players:list, game:int, save_json:bool, header
                 print("Sleeping for {} seconds".format(sleep_time))
                 sleep(sleep_time)
 
-            variables = {"eventId": e['id'], "page": i}
+            variables = {"slug": e, "page": i}
             response = run_query(RESULTS_QUERY, variables, header) # Send request
             print("Page {}".format(i)) # Console logging
 
@@ -53,11 +52,12 @@ def get_results(tournaments:list, players:list, game:int, save_json:bool, header
                 if (player1 in players or player2 in players): # If either player is in the list
                     sets.append(s) # Append set to sets list
 
-        results[e['id']] = {
-            'tournamentName': e['tournament']['name'],
-            'tournamentId': e['tournament']['name'],
-            'eventName': e['name'],
-            'eventId': e['id'],
+        results[e] = {
+            # Will add more info
+            # 'tournamentName': e['tournament']['name'],
+            # 'tournamentId': e['tournament']['name'],
+            # 'eventName': e['name'],
+            # 'eventId': e['id'],
             'sets': sets
         }
 
