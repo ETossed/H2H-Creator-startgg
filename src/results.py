@@ -57,11 +57,12 @@ def get_results(tournaments:list, players:list, game:int, save_json:bool, header
             'tournamentName': e['tournament']['name'],
             'tournamentId': e['tournament']['name'],
             'eventName': e['name'],
+            'eventId': e['id'],
             'sets': sets
         }
 
     if save_json: # Outputting json file if flag activated
-        with open('results.json', 'w+', encoding='utf-8') as outfile:
+        with open('tournament_results.json', 'w+', encoding='utf-8') as outfile:
             json.dump(results, outfile, indent=4)
 
     return results

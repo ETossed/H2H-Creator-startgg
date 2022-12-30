@@ -28,6 +28,7 @@ query EventSets($eventId: ID!, $page: Int!) {
       id
       name
     }
+    id
     name
     sets(page: $page, perPage: 18, sortType: STANDARD) {
       nodes {

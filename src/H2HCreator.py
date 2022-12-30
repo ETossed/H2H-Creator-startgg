@@ -1,10 +1,9 @@
 import events
 import results
 import players
+import creator
 from dotenv import load_dotenv
 from os import getenv
-
-import json
 
 class H2HMaker(object):
     def __init__(self, key, save_json:bool, sleep_time=15): # Initializes object
@@ -41,8 +40,8 @@ class H2HMaker(object):
     def get_results(self, tournaments:list, players:list, game:int): # Don't know if will be implemented
         return results.get_results(tournaments, players, game, self.save_json, self.header, self.sleep_time)
 
-    def create_h2h_spreadsheet(self, players:list, tournaments:list, game:int):
-        return
+    def create_h2h_spreadsheet(self, tournaments:list, players:list, game:int):
+        return creator.h2h_spreadsheet(tournaments, players, game, self.save_json, self.header, self.sleep_time)
 
 def main():
     # Testing area
@@ -50,12 +49,6 @@ def main():
     key = getenv("KEY")
     test = H2HMaker(key, True)
 
-    print(test.get_results(["smash-summit-14-presented-by-coinbase"], ["1c97bdae", "da8b9c25"], 1))
-
-    # test.get_events(["smash-summit-14-presented-by-coinbase"], 1)
-
-    # test.get_players_info(["1c97bdae", "da8b9c25"])
-
-    # print(json.dumps(data, indent=4))
+    test.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase"], ["1c97bdae", "da8b9c25", "cfe7a825"], 1)
 
 main()
