@@ -74,7 +74,7 @@ def create_player_dictionary(results:list, players:list, save_json:bool, header,
 
     return player_dict
 
-def to_csv_h2h_ids(data, output='H2H_table.csv'):
+def to_csv_h2h(data, output='H2H_table.csv'):
     players = []
     for p in data:
         players.append(p)
@@ -150,9 +150,68 @@ def to_csv_h2h_ids(data, output='H2H_table.csv'):
     writer = csv.writer(open(output,'w',encoding='utf-8',newline=''))
     writer.writerows(csv_lines)
 
-def h2h_spreadsheet(tournaments:list, players:list, save_json:bool, header, sleep_time):
-    results = get_results(tournaments, players, save_json, header, sleep_time) # Gets results
+def to_csv_wl(data, output='WL_table.csv'):
+    players = []
+    for p in data:
+        players.append(p)
 
+    with open(output, 'w', encoding='utf-8') as new_file:
+        # Top left corner
+        new_file.write('ETossed,')
+
+        # Header row
+        new_file.write('Wins,Losses\n')
+
+        for player in players:
+            # Initialization
+            wins = {}
+            losses = {}
+
+            new_file.write(player + ',\"') # Initial quote
+            for op in data[player]['W']:
+                if op in wins:
+                    wins[op] += 1
+                else:
+                    wins[op] = 1
+            
+            # Adding wins to column
+            for w in sorted(wins, key=str.casefold):
+                if wins[w] == 1:
+                    new_file.write(w + ", ")
+                else:
+                    new_file.write(w + "(x" + str(wins[w]) + "), ")
+
+            # Closing quote and new quote
+            new_file.write('\",\"')
+
+            for op in data[player]['L']:
+                # If already in lossses
+                if op in losses:
+                    losses[op] += 1
+                else:
+                    losses[op] = 1
+            
+            # Adding wins to column
+            for l in sorted(losses, key=str.casefold):
+                if losses[l] == 1:
+                    new_file.write(l + ", ")
+                else:
+                    new_file.write(l + "(x" + str(losses[l]) + "), ")
+
+            # Closing quote
+            new_file.write('\",')
+
+            # Print newline
+            new_file.write('\n')
+
+def h2h_spreadsheet(events:list, players:list, save_json:bool, header, sleep_time):
+    results = get_results(events, players, save_json, header, sleep_time) # Gets results
     player_data = create_player_dictionary(results, players, save_json, header, sleep_time) # Gets player data
 
-    to_csv_h2h_ids(player_data)
+    to_csv_h2h(player_data)
+
+def wl_spreadsheet(events:list, players:list, save_json:bool, header, sleep_time):
+    results = get_results(events, players, save_json, header, sleep_time) # Gets results
+    player_data = create_player_dictionary(results, players, save_json, header, sleep_time) # Gets player data
+
+    to_csv_wl(player_data)

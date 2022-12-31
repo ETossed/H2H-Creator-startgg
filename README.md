@@ -48,20 +48,22 @@ creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True)
 from H2H_Creator_startgg import H2HCreator
 creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True, 15)
 
-# create_h2h_spreadsheet(self, events:list, players:list)
+# create_h2h_spreadsheet(events:list, players:list)
 # Usage: Creates H2H .csv file
-creator.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase", "tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"], 1) 
+creator.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase", "tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"]) 
+
+# create_win_loss_spreadsheet(events:list, players:list)
 
 # get_results(self, events:list, players:list)
 # Usage: Creates json object/file of all sets from all singles events of given game from all tournaments in given list that include any of the players in given list
 creator.get_results(["tournament/smash-summit-14-presented-by-coinbase/event/melee-singles", "tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"])
 
-# Args: List of tournament slugs, game id
+# get_events(tournaments:list, game)
 # Usage: Creates json object/file of all singles events from all tournaments in given list from given game
 # Use https://docs.google.com/spreadsheets/d/1l-mcho90yDq4TWD-Y9A22oqFXGo8-gBDJP0eTmRpTaQ/ to find the game id you're looking for
 creator.get_events(["smash-summit-14-presented-by-coinbase", "genesis-8"], 1)
 
-# Arg: List of player slugs
+# get_players_info(player_list:list)
 # Usage: Creates json object/file of details about each player inputted
 creator.get_players_info(["1c97bdae", "da8b9c25", "cfe7a825"])
 ```

@@ -43,12 +43,5 @@ class H2HMaker(object):
     def create_h2h_spreadsheet(self, events:list, players:list):
         return creator.h2h_spreadsheet(events, players, self.save_json, self.header, self.sleep_time)
 
-# def main():
-#     # Testing area
-#     load_dotenv()
-#     key = getenv("KEY")
-#     test = H2HMaker(key, True)
-
-#     test.create_h2h_spreadsheet(["tournament/smash-summit-14-presented-by-coinbase/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"])
-
-# main()
+    def create_win_loss_spreadsheet(self, events:list, players:list):
+        return creator.wl_spreadsheet(events, players, self.save_json, self.header, self.sleep_time)
