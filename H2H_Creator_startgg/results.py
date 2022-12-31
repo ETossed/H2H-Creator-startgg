@@ -50,7 +50,8 @@ def get_results(events:list, players:list, save_json:bool, header, sleep_time):
                 player1 = s['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #1
                 player2 = s['slots'][1]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #2
                 if (player1 in players or player2 in players): # If either player is in the list
-                    sets.append(s) # Append set to sets list
+                    if (s not in sets): # Prevent duplicate sets
+                        sets.append(s) # Append set to sets list
 
         results[e] = {
             # Will add more info
