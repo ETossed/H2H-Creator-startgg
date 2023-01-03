@@ -119,7 +119,6 @@ creator.print_sleep_time()
 - Also note the difference between the `Spreadsheet Name` and the `Worksheet Name` 
 - <img src = "misc/names.png" width = "400px">
 
-
 ```py
 from H2H_Creator_startgg import spreadsheets
 
