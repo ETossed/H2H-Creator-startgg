@@ -113,8 +113,11 @@ creator.print_sleep_time()
 # **Link to Google Sheets**
 - Dumps information from *H2H.csv* created using the `create_h2h_spreadsheet` as mentioned above, and color codes the winning, losing, and tied records for easier viewing
 - You must have a Service Account created through Google to connect service to the spreadsheet. To create one [Follow these instruction](https://docs.gspread.org/en/v5.7.0/oauth2.html#enable-api-access-for-a-project) up to downloading the JSON file. Take a note of where it is saved.
-- Create the google sheet you would like to have the information put into, and press the share option and add the email of the service account that you created as an editor for the spreadsheet. ![serviceaccount](misc/service_account.png) ![google](misc/share_project.png)
-- Also note the difference between the `Spreadsheet Name` and the `Worksheet Name` ![names](misc/names.png)
+- Create the google sheet you would like to have the information put into, and press the share option and add the email of the service account that you created as an editor for the spreadsheet. 
+- <img src = "misc/service_account.png" width = "400px">
+- <img src = "misc/share_project.png" width = "500px">
+- Also note the difference between the `Spreadsheet Name` and the `Worksheet Name` 
+- <img src = "misc/names.png" width = "400px">
 
 
 ```py
