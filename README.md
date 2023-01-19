@@ -12,7 +12,7 @@
 
 ## **How to install current version**
 
-- `pip install H2H_Creator_startgg`
+- `pip install H2HCreatorstartgg`
 - PyPI Page: [https://pypi.org/project/H2H-Creator-startgg/](https://pypi.org/project/H2H-Creator-startgg/)
 - Make sure you have your API Key! Go to your developer settings in your profile and create a new token if you don't have it! The `'KEY'` in the examples is just a placeholder for whatever your key is
 
@@ -36,7 +36,7 @@ Win/Loss table maker should be out very soon, which is another way to display th
 ## **How to use**
 
 ```py
-from H2H_Creator_startgg import H2HCreator
+from H2HCreatorstartgg import H2HCreator
 creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True)
 
 # Second argument is for json_save, which allows you to save the data that it's going through as a bunch of different json files, check examples folder for an example
@@ -47,7 +47,7 @@ creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True)
 ## **Main Functions**
 
 ```py
-from H2H_Creator_startgg import H2HCreator
+from H2HCreatorstartgg import H2HCreator
 creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True, 15)
 
 # create_h2h_spreadsheet(events:list, players:list)
@@ -84,7 +84,7 @@ creator.get_players_info(["1c97bdae", "da8b9c25", "cfe7a825"])
 # **Auxiliary Functions**
 
 ```py
-from H2H_Creator_startgg import H2HCreator
+from H2HCreatorstartgg import H2HCreator
 creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True, 15)
 
 # These are basically useless but it's standard to make these in OOP
@@ -121,7 +121,7 @@ creator.print_sleep_time()
 - <img src = "misc/names.png" width = "400px">
 
 ```py
-from H2H_Creator_startgg import spreadsheets
+from H2HCreatorstartgg import spreadsheets
 
 # importSpreadsheet(key_location: str, spreadsheet_name: str, worksheet_name: str, csv_location: str)
 # Send info from csv to google spreadsheet

@@ -2,8 +2,6 @@ import events
 import results
 import players
 import creator
-from dotenv import load_dotenv
-from os import getenv
 
 class H2HMaker(object):
     def __init__(self, key, save_json:bool, sleep_time=15): # Initializes object

@@ -1,3 +1,9 @@
+# **v0.2**
+
+- Added google sheets use
+- Thanks to @odds_or_evans for coding it :)
+- Changed package name to H2HCreatorstartgg because underscores cause issues
+
 # **v0.1.2**
 
 - Added ability to create a Win/Loss spreadsheet, a different way to view the data
