@@ -1,5 +1,4 @@
 import requests
-import time
 from exceptions import TooManyRequestsError, ResponseError, RequestError, ServerError, NoIdeaError
 
 def run_query(query, variables, header):
