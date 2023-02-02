@@ -3,10 +3,11 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "H2HCreatorstartgg"
-version = "0.2"
+name = "H2H_Creator_startgg"
+version = "0.3"
 authors = [
   { name="ETossed", email="jthroughs@gmail.com" },
+  { name="odds_or_evans" }
 ]
 description = "H2H Spreadsheet Creator for startgg"
 readme = "README.md"
