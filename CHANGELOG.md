@@ -2,7 +2,6 @@
 
 - Added google sheets use
 - Thanks to @odds_or_evans for coding it :)
-- Changed package name to H2HCreatorstartgg because underscores cause issues
 - A lot of other stuff I am too lazy to write about
 
 # **v0.1.2**
