@@ -12,7 +12,7 @@
 
 ## **How to install current version**
 
-- `pip install H2H_Creator_startgg`
+- `pip install H2HCreatorstartgg`
 - PyPI Page: [https://pypi.org/project/H2H-Creator-startgg/](https://pypi.org/project/H2H-Creator-startgg/)
 - Make sure you have your API Key! Go to your developer settings in your profile and create a new token if you don't have it! The `'KEY'` in the examples is just a placeholder for whatever your key is
 
@@ -30,11 +30,13 @@ Win/Loss table maker should be out very soon, which is another way to display th
 
 - Requests - `pip install requests`
 - csv - `pip install csv`
+- gspread - `pip install gspread`
+- pandas - `pip install pandas`
 
 ## **How to use**
 
 ```py
-from H2H_Creator_startgg import H2HCreator
+from H2HCreatorstartgg import H2HCreator
 creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True)
 
 # Second argument is for json_save, which allows you to save the data that it's going through as a bunch of different json files, check examples folder for an example
@@ -45,7 +47,7 @@ creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True)
 ## **Main Functions**
 
 ```py
-from H2H_Creator_startgg import H2HCreator
+from H2HCreatorstartgg import H2HCreator
 creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True, 15)
 
 # create_h2h_spreadsheet(events:list, players:list)
@@ -82,7 +84,7 @@ creator.get_players_info(["1c97bdae", "da8b9c25", "cfe7a825"])
 # **Auxiliary Functions**
 
 ```py
-from H2H_Creator_startgg import H2HCreator
+from H2HCreatorstartgg import H2HCreator
 creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True, 15)
 
 # These are basically useless but it's standard to make these in OOP
@@ -106,4 +108,22 @@ creator.print_header()
 
 # Prints sleep_time
 creator.print_sleep_time()
+```
+
+
+# **Link to Google Sheets**
+- Dumps information from *H2H.csv* created using the `create_h2h_spreadsheet` as mentioned above, and color codes the winning, losing, and tied records for easier viewing
+- You must have a Service Account created through Google to connect service to the spreadsheet. To create one [Follow these instructions](https://docs.gspread.org/en/v5.7.0/oauth2.html#enable-api-access-for-a-project) up to downloading the JSON file. Take a note of where it is saved.
+- Create the google sheet you would like to have the information put into, and press the share option and add the email of the service account that you created as an editor for the spreadsheet. 
+- <img src = "H2H_Creator_startgg/images/service_account.png" width = "400px">
+- <img src = "H2H_Creator_startgg/images/share_project.png" width = "500px">
+- Also note the difference between the `Spreadsheet Name` and the `Worksheet Name` 
+- <img src = "H2H_Creator_startgg/images/names.png" width = "400px">
+
+```py
+from H2HCreatorstartgg import spreadsheets
+
+# importSpreadsheet(key_location: str, spreadsheet_name: str, worksheet_name: str, csv_location: str)
+# Send info from csv to google spreadsheet
+spreadsheets.importSpreadsheet("JSON_GOOGLE_SERVICE_KEY_PATH", "SPREADSHEET_NAME", "WORKSHEET_NAME", "H2H_CSV_PATH")
 ```
