@@ -19,7 +19,7 @@ def get_results(events:list, players:list, save_json:bool, header, sleep_time):
         done = False
 
         while (not done):
-            if i % 6 == 0: # Sleeping so startgg server doesn't hate me
+            if i % 35 == 0: # Sleeping so startgg server doesn't hate me
                 print("Sleeping for {} seconds".format(sleep_time))
                 sleep(sleep_time)
 
@@ -28,9 +28,9 @@ def get_results(events:list, players:list, save_json:bool, header, sleep_time):
             print("Page {}".format(i)) # Console logging
 
             if response == 500: # If random server error
-                print("Retrying in 15 seconds")
+                print("Retrying page {} in 10 seconds".format(i))
                 i -= 1
-                sleep(15)
+                sleep(10)
 
             # ERROR CHECKING
             if response == 500: # Server error
