@@ -6,8 +6,6 @@ from queries import PLAYERS_QUERY
 from time import sleep
 from exceptions import *
 
-# ["2a371960"]
-
 def get_players_info(players:list, save_json:bool, header, sleep_time):
     players_info = {}
 
@@ -17,10 +15,14 @@ def get_players_info(players:list, save_json:bool, header, sleep_time):
         response = run_query(PLAYERS_QUERY, variables, header) # Get response from server
         print("Trying player {}".format(players[i])) # Console logging
 
+        if i % 35 == 0: # Sleeping so startgg server doesn't hate me
+            print("Sleeping for {} seconds".format(sleep_time))
+            sleep(sleep_time)
+
         if response == 500: # If random server error
-            print("Retrying in 15 seconds")
+            print("Retrying in 10 seconds")
             i -= 1
-            sleep(15)
+            sleep(10)
 
         if response['data']['user'] is None: # Error Checking
             return
