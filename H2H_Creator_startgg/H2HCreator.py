@@ -31,6 +31,9 @@ class H2HMaker(object):
 
     def get_players_info(self, player_list:list): # List of slugs
         return players.get_players_info(player_list, self.save_json, self.header, self.sleep_time)
+    
+    def get_tournaments_by_game_during_time_period(self, game:int, after:int, before:int):
+        return events.get_tournaments_by_game_during_time_period(game, after, before, self.save_json, self.header, self.sleep_time)
         
     def get_events(self, tournaments:list, game):
         return events.get_events(tournaments, game, self.save_json, self.header, self.sleep_time)

@@ -1,3 +1,7 @@
+# **v0.4**
+
+- Created get_tournaments_with_game_during_time_period()
+
 # **v0.3**
 
 - Added google sheets use

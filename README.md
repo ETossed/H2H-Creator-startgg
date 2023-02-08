@@ -41,7 +41,7 @@ creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True)
 
 # Second argument is for json_save, which allows you to save the data that it's going through as a bunch of different json files, check examples folder for an example
 
-# There is an optional fourth argument called sleep_time (int) which is forced to run because if you attempt too many queries in a row, startgg's API will not respond and will time you out, so sleeping 15 seconds (default of 15) every 6 queries is better
+# There is an optional third argument called sleep_time (int) which is forced to run because if you attempt too many queries in a row, startgg's API will not respond and will time you out, so sleeping 15 seconds (default of 15) every 6 queries is better
 ```
 
 ## **Main Functions**
@@ -57,6 +57,10 @@ creator.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase", "tourna
 # create_win_loss_spreadsheet(events:list, players:list)
 # Usage: Creates WL.csv file
 creator.create_win_loss_spreadsheet(["smash-summit-14-presented-by-coinbase", "tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"]) 
+
+# get_tournaments_by_game_during_time_period(self, game:int, after:unix timestamp, before:unix timestamp)
+# Usage: Createss json object/file of all tournaments that has an event with a certain game between two timestamps
+creator = smash.get_tournaments_with_game_during_time_period(1, 1672102800, 1675746993)
 
 # get_results(self, events:list, players:list)
 # Usage: Creates json object/file of all sets from all singles events of given game from all tournaments in given list that include any of the players in given list
@@ -109,7 +113,6 @@ creator.print_header()
 # Prints sleep_time
 creator.print_sleep_time()
 ```
-
 
 # **Link to Google Sheets**
 - Dumps information from *H2H.csv* created using the `create_h2h_spreadsheet` as mentioned above, and color codes the winning, losing, and tied records for easier viewing
