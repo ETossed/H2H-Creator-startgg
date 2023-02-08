@@ -12,15 +12,15 @@
 
 ## **How to install current version**
 
-- `pip install H2HCreatorstartgg`
-- PyPI Page: [https://pypi.org/project/H2H-Creator-startgg/](https://pypi.org/project/H2H-Creator-startgg/)
-- Make sure you have your API Key! Go to your developer settings in your profile and create a new token if you don't have it! The `'KEY'` in the examples is just a placeholder for whatever your key is
+- Install the latest version of python from [https://www.python.org/downloads/](https://www.python.org/downloads/)
+- `pip install H2H_Creator_startgg` installs the latest version of the package (here is the PyPI Page for those interested: [https://pypi.org/project/H2H-Creator-startgg/](https://pypi.org/project/H2H-Creator-startgg/))
+- Make sure you have your API Key! Go to your developer settings in your profile on start.gg by clicking on your profile picture in the bottom left corner -- create a new token if you don't have it! The `'KEY'` in the examples is just a placeholder for whatever your API key is
 
 ## **FAQ**
 
 - Why do you have a sleep timer?
 
-Well, you see, startgg will deny your API requests if you make too many of them, so I've found that over my hundreds (if not 1000+) of hours of using startgg's API, setting a sleep timer for 15 seconds in between around 6 or 7 queries works really well, and you can just let the script run. Obviously, you can change that with the variable sleep_time in the H2HMaker object initializiation, but that's where I recommend keeping it
+Well, you see, startgg will deny your API requests if you make too many of them, so I've found that over my hundreds (if not 1000+) of hours of using startgg's API, setting a sleep timer for 15 seconds for every 35 queries works really well, and you can just let the script run. Obviously, you can change that with the variable sleep_time in the H2HMaker object initializiation, but that's where I recommend keeping it -- If the API times you out, there's a function that handles that
 
 - Other features soon?
 
