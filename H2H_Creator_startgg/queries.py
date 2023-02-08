@@ -84,3 +84,36 @@ query ($slug: String!) {
   }
 }
 '''
+
+TOURNAMENTS_BY_TIME_QUERY = '''
+query TournamentsByVideogame($page: Int!, $videogameId: [ID!], $after: Timestamp!, $before: Timestamp!) {
+  tournaments(query: {
+    perPage: 32
+    page: $page
+    sortBy: "startAt asc"
+    filter: {
+      past: false
+      videogameIds: $videogameId
+      afterDate: $after
+      beforeDate: $before
+    }
+  }) {
+    nodes {
+      name
+      id
+      slug
+      isOnline
+      startAt
+      endAt
+      events {
+        name
+        id
+        numEntrants
+        videogame {
+          id
+        }
+      }
+    }
+  }
+}
+'''

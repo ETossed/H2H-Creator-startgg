@@ -1,14 +1,45 @@
-# File for getting all events from tournaments certain for a certain game
-# TODO: Time stuff
-
 import json
 from api import run_query
-from queries import EVENT_QUERY
+from queries import EVENT_QUERY, TOURNAMENTS_BY_TIME_QUERY
 from time import sleep
+
+def get_tournaments_by_game_during_time_period(game:int, after:int, before:int, save_json:bool, header:dict, sleep_time:int):
+    tournaments = []
+    
+    done = False
+    i = 0
+    while (not done):
+        i += 1 # Iterate for next time
+
+        if i % 35 == 0: # Sleeping so startgg server doesn't hate me
+            print("Sleeping for {} seconds".format(sleep_time)) # Console logging
+            sleep(sleep_time)
+
+        variables = {"page": i, "videogameId": game, "after": after, "before": before}
+        response = run_query(TOURNAMENTS_BY_TIME_QUERY, variables, header) # Get response from server
+        print("Page {}".format(i))
+
+        if response == 500: # If random server error
+            print("Retrying page {} in 10 seconds".format(i))
+            i -= 1
+            sleep(10)
+
+        if response['data']['tournaments'] is None: # Error checking
+            print("ERROR: {} is not a valid game".format(game))
+
+        if response['data']['tournaments']['nodes'] == []: # Error checking
+            done = True
+
+        tournaments += response['data']['tournaments']['nodes'] # Concatenation of tournaments
+
+    if save_json: # Outputting json file if flag activated
+        with open('events.json', 'w+', encoding='utf-8') as outfile:
+            json.dump(tournaments, outfile, indent=4)
+
+    return tournaments
 
 def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_time:int):
     events = []
-    substrings = ['singles', '1v1', 'championships', 'ladder']
     bad_substrings = ['volleyball', 'doubles', 'amateur']
 
     i = 0
@@ -18,17 +49,17 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
         print("Tournament {}".format(tournaments[i])) # Console logging
         i += 1 # Iterate for next time
 
-        if i % 6 == 0: # Sleeping so startgg server doesn't hate me
-            print("Sleeping for 15 seconds") # Console logging
+        if i % 35 == 0: # Sleeping so startgg server doesn't hate me
+            print("Sleeping for {} seconds".format(sleep_time)) # Console logging
             sleep(sleep_time)
 
         variables = {"slug": t}
         response = run_query(EVENT_QUERY, variables, header) # Get response from server
 
         if response == 500: # If random server error
-            print("Retrying in 15 seconds")
+            print("Retrying page {} in 10 seconds".format(i))
             i -= 1
-            sleep(15)
+            sleep(10)
 
         if response['data']['tournament'] is None: # Error checking
             print("ERROR: {} is not a valid tournament slug".format(t))
@@ -39,13 +70,12 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
         for e in response['data']['tournament']['events']: # Loop to find specific event
             if e['videogame']['id'] == game:
                 if e['teamRosterSize'] is None or e['teamRosterSize']['maxPlayers'] == 1:
-                    if any(x in e['name'].lower() for x in substrings):
-                        if any(y in e['name'].lower() for y in bad_substrings):
-                            continue
-                        else:
-                            del e['teamRosterSize']
-                            events.append(e)
-                            changed = True
+                    if any(y in e['name'].lower() for y in bad_substrings):
+                        continue
+                    else:
+                        del e['teamRosterSize']
+                        events.append(e)
+                        changed = True
                 
         if (not changed): # If no event found
             print("ERROR: {} had no matching singles events for desired videogame ID".format(t))
