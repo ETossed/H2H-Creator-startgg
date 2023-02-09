@@ -21,15 +21,15 @@ def run_query(query, variables, header):
 
     except RequestError:
         print("Error 400: Bad request (probably means your key is wrong)")
-        return
+        return 400
 
     except TooManyRequestsError:
         print("Error 429: Sending too many requests right now")
-        return
+        return 429
 
     except ResponseError:
         print("Error {}: Unknown request error".format(request.status_code))
-        return
+        return 404
 
     except ServerError:
         print("Error {}: Unknown server error".format(request.status_code))

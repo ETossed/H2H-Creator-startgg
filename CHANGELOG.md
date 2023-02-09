@@ -1,3 +1,7 @@
+# **v0.4.1**
+
+- Added more error checking
+
 # **v0.4**
 
 - Created get_tournaments_with_game_during_time_period()

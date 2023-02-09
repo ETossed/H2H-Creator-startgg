@@ -17,10 +17,9 @@ def get_tournaments_by_game_during_time_period(game:int, after:int, before:int, 
 
         variables = {"page": i, "videogameId": game, "after": after, "before": before}
         response = run_query(TOURNAMENTS_BY_TIME_QUERY, variables, header) # Get response from server
-        print("Page {}".format(i))
 
-        if response == 500: # If random server error
-            print("Retrying page {} in 10 seconds".format(i))
+        if response == 500 or response == 429 or response == 404 or response == 400: # If server error
+            print("Error code {} Retrying page {} in 10 seconds".format(response, i))
             i -= 1
             sleep(10)
 
@@ -29,6 +28,8 @@ def get_tournaments_by_game_during_time_period(game:int, after:int, before:int, 
 
         if response['data']['tournaments']['nodes'] == []: # Error checking
             done = True
+
+        print("Page {}".format(i))
 
         tournaments += response['data']['tournaments']['nodes'] # Concatenation of tournaments
 
@@ -56,8 +57,8 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
         variables = {"slug": t}
         response = run_query(EVENT_QUERY, variables, header) # Get response from server
 
-        if response == 500: # If random server error
-            print("Retrying page {} in 10 seconds".format(i))
+        if response == 500 or response == 429 or response == 404 or response == 400: # If server error
+            print("Error code {} Retrying tournament {} in 10 seconds".format(response, t))
             i -= 1
             sleep(10)
 
