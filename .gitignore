@@ -3,3 +3,4 @@ build/
 dist/
 H2H_Creator_startgg.egg-info/
 .env
+*.json

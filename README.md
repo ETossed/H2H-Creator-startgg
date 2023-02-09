@@ -52,11 +52,13 @@ creator = H2HCreator.H2HMaker("YOUR_KEY_HERE", True, 15)
 
 # create_h2h_spreadsheet(events:list, players:list)
 # Usage: Creates H2H.csv file
-creator.create_h2h_spreadsheet(["smash-summit-14-presented-by-coinbase", "tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"]) 
+creator.create_h2h_spreadsheet(["tournament/smash-summit-14-presented-by-coinbase/event/melee-singles", 
+"tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"]) 
 
 # create_win_loss_spreadsheet(events:list, players:list)
 # Usage: Creates WL.csv file
-creator.create_win_loss_spreadsheet(["smash-summit-14-presented-by-coinbase", "tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"]) 
+creator.create_win_loss_spreadsheet(["tournament/smash-summit-14-presented-by-coinbase/event/melee-singles", 
+"tournament/genesis-8/event/melee-singles"], ["1c97bdae", "da8b9c25", "cfe7a825"]) 
 
 # get_tournaments_by_game_during_time_period(self, game:int, after:unix timestamp, before:unix timestamp)
 # Usage: Createss json object/file of all tournaments that has an event with a certain game between two timestamps

@@ -48,9 +48,8 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
         t = tournaments[i]
         changed = False # If event exists and array changes
         print("Tournament {}".format(tournaments[i])) # Console logging
-        i += 1 # Iterate for next time
 
-        if i % 35 == 0: # Sleeping so startgg server doesn't hate me
+        if i+1 % 35 == 0: # Sleeping so startgg server doesn't hate me
             print("Sleeping for {} seconds".format(sleep_time)) # Console logging
             sleep(sleep_time)
 
@@ -77,6 +76,8 @@ def get_events(tournaments:list, game:int, save_json:bool, header:dict, sleep_ti
                         del e['teamRosterSize']
                         events.append(e)
                         changed = True
+
+        i += 1 # Iterate for next time
                 
         if (not changed): # If no event found
             print("ERROR: {} had no matching singles events for desired videogame ID".format(t))
