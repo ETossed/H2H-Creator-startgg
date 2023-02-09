@@ -14,7 +14,7 @@ def get_players_info(players:list, save_json:bool, header, sleep_time):
         variables = {"slug": players[i]}
         response = run_query(PLAYERS_QUERY, variables, header) # Get response from server
 
-        if i % 35 == 0: # Sleeping so startgg server doesn't hate me
+        if i+1 % 35 == 0: # Sleeping so startgg server doesn't hate me
             print("Sleeping for {} seconds".format(sleep_time))
             sleep(sleep_time)
 
@@ -29,7 +29,6 @@ def get_players_info(players:list, save_json:bool, header, sleep_time):
             return
         
         print("Trying player {}".format(players[i])) # Console logging
-
         players_info[players[i]] = response['data']['user']
 
         i += 1 # iteration

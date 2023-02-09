@@ -39,10 +39,9 @@ def get_results(events:list, players:list, save_json:bool, header, sleep_time):
                 return
             elif response['data']['event']['sets']['nodes'] == []: # If pagination completed
                 done = True
-            else:
-                i += 1 # iteration for next time
-
+            
             print("Page {}".format(i)) # Console logging
+            i += 1 # iteration for next time
 
             for s in response['data']['event']['sets']['nodes']: # Iterate through all sets
                 player1 = s['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #1
