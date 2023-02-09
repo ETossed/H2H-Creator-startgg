@@ -25,16 +25,12 @@ def get_results(events:list, players:list, save_json:bool, header, sleep_time):
 
             variables = {"slug": e, "page": i}
             response = run_query(RESULTS_QUERY, variables, header) # Send request
-            print("Page {}".format(i)) # Console logging
 
-            if response == 500: # If random server error
-                print("Retrying page {} in 10 seconds".format(i))
+            if response == 500 or response == 429 or response == 404 or response == 400: # If server error
+                print("Error code {} Retrying page {} in 10 seconds".format(response, i))
                 i -= 1
                 sleep(10)
 
-            # ERROR CHECKING
-            if response == 500: # Server error
-                print("You got a server error, retrying in 15 seconds")
             elif 'data' not in response: # Error
                 return
             elif response['data']['event'] is None: # Error
@@ -45,6 +41,8 @@ def get_results(events:list, players:list, save_json:bool, header, sleep_time):
                 done = True
             else:
                 i += 1 # iteration for next time
+
+            print("Page {}".format(i)) # Console logging
 
             for s in response['data']['event']['sets']['nodes']: # Iterate through all sets
                 player1 = s['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #1
