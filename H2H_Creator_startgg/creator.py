@@ -26,7 +26,7 @@ def create_player_dictionary(results:list, players:list, save_json:bool, header,
                 entrant1_slug = ""
             entrant2_score = set['slots'][1]['standing']['stats']['score']['value'] # Score
 
-            if set['slots'][0]['standing'] is not None: # If match is completed
+            if set['slots'][0]['standing'] is not None and entrant1_score >= 0 and entrant2_score >= 0: # If match is completed
                 # Both players in the set are important
                 if (entrant1_slug in players and entrant2_slug in players): 
                     if (event_slug not in player_dict[entrant1]['Events']): # Adds event to event list
