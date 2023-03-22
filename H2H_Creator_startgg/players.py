@@ -19,7 +19,7 @@ def get_players_info(players:list, save_json:bool, header, sleep_time):
             sleep(sleep_time)
 
         if response == 500 or response == 429 or response == 404 or response == 400: # If server error
-            print("Error code {} Retrying player {} in 10 seconds".format(response, i))
+            print("Error code {} -- Retrying player {} in 10 seconds".format(response, i))
             i -= 1
             sleep(10)
 

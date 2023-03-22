@@ -14,10 +14,16 @@ def create_player_dictionary(results:list, players:list, save_json:bool, header,
         for set in results[tournament]['sets']:
             event_slug = tournament
             entrant1 = set['slots'][0]['entrant']['participants'][0]['player']['gamerTag'].split(' | ')[-1].strip() # Gamertag
-            entrant1_slug = set['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Slug
+            try:
+                entrant1_slug = set['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Slug
+            except(TypeError):
+                entrant1_slug = ""
             entrant1_score = set['slots'][0]['standing']['stats']['score']['value'] # Score
             entrant2 = set['slots'][1]['entrant']['participants'][0]['player']['gamerTag'].split(' | ')[-1].strip() # Gamertag
-            entrant2_slug = set['slots'][1]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Slug
+            try:
+                entrant2_slug = set['slots'][1]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Slug
+            except(TypeError):
+                entrant1_slug = ""
             entrant2_score = set['slots'][1]['standing']['stats']['score']['value'] # Score
 
             if set['slots'][0]['standing'] is not None: # If match is completed
