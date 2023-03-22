@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "H2H_Creator_startgg"
-version = "0.4.2.0.4"
+version = "0.4.2.0.10"
 authors = [
   { name="ETossed", email="jthroughs@gmail.com" },
   { name="odds_or_evans" }

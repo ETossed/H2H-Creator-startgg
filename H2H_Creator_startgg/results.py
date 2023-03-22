@@ -43,26 +43,34 @@ def get_results(events:list, players:list, save_json:bool, header, sleep_time):
             print("Page {}".format(i)) # Console logging
             i += 1 # iteration for next time
 
-            for s in response['data']['event']['sets']['nodes']: # Iterate through all sets
-                bad_set = False
-                try:
-                    player1 = s['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #1
-                except(TypeError):
-                    bad_set = True
-                    print("Player with tag {tag} didn't have a user account".
-                          format(tag=s['slots'][0]['entrant']['participants'][0]['player']['gamerTag']))
-                    
-                try:
-                    player2 = s['slots'][1]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #2
-                except(TypeError):
-                    bad_set = True
-                    print("Player with tag {tag} didn't have a user account".
-                          format(tag=s['slots'][1]['entrant']['participants'][0]['player']['gamerTag']))
+            if type(response) is not int:
+                for s in response['data']['event']['sets']['nodes']: # Iterate through all sets
+                    if s['state'] == 3:
+                        bad_set = False
+                        try:
+                            player1 = s['slots'][0]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #1
+                        except(TypeError, AttributeError) as error:
+                            bad_set = True
+                            print("Player with tag {tag} didn't have a user account fully set up".
+                                format(tag=s['slots'][0]['entrant']['participants'][0]['player']['gamerTag']))
+                        except(IndexError):
+                            bad_set = True
+                            print("Bugged set, no results")
+                            
+                        try:
+                            player2 = s['slots'][1]['entrant']['participants'][0]['player']['user']['slug'].split('/')[1] # Gets user slug of player #2
+                        except(TypeError, AttributeError) as error:
+                            bad_set = True
+                            print("Player with tag {tag} didn't have a user account fully set up".
+                                format(tag=s['slots'][1]['entrant']['participants'][0]['player']['gamerTag']))
+                        except(IndexError):
+                            bad_set = True
+                            print("Bugged set, no results")
 
-                if not bad_set:
-                    if (player1 in players or player2 in players): # If either player is in the list
-                        if (s not in sets): # Prevent duplicate sets
-                            sets.append(s) # Append set to sets list
+                        if not bad_set:
+                            if (player1 in players or player2 in players): # If either player is in the list
+                                if (s not in sets): # Prevent duplicate sets
+                                    sets.append(s) # Append set to sets list
         results[e] = {
             # Will add more info
             # 'tournamentName': e['tournament']['name'],

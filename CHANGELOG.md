@@ -1,4 +1,4 @@
-# **v0.4.2.0.4**
+# **v0.4.2.0.10**
 
 - Added slug for tournaments
 - Bug fixes in terms of errors

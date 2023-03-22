@@ -36,6 +36,7 @@ query EventSets($slug: String!, $page: Int!) {
       nodes {
         fullRoundText
         id
+        state
         slots {
           standing {
             placement

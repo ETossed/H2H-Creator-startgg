@@ -23,13 +23,14 @@ def get_players_info(players:list, save_json:bool, header, sleep_time):
             i -= 1
             sleep(10)
 
-        if response['data']['user'] is None: # Error Checking
-            return
-        if response['data']['user']['player'] is None: # Error Checking
-            return
-        
-        print("Trying player {}".format(players[i])) # Console logging
-        players_info[players[i]] = response['data']['user']
+        if type(response) is not int:
+            if response['data']['user'] is None: # Error Checking
+                return
+            if response['data']['user']['player'] is None: # Error Checking
+                return
+            
+            print("Getting info for player {}".format(players[i])) # Console logging
+            players_info[players[i]] = response['data']['user']
 
         i += 1 # iteration
 
