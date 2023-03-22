@@ -108,6 +108,7 @@ query TournamentsByVideogame($page: Int!, $videogameId: [ID!], $after: Timestamp
       events {
         name
         id
+        slug
         numEntrants
         videogame {
           id
